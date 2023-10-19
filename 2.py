@@ -26,7 +26,7 @@ def parse(input):
 
 
 def get_h(state):
-    h = min(paths[paths[:, 0]==state][:, 2], default=0) # 最小出路
+    h = min(paths[paths[:, START_IDX]==state][:, 2], default=0) # 最小出路
     return h
 
 

@@ -53,12 +53,13 @@ for test in tests:
     input = test.strip()
     cost = 0
     next_state = input
-    print(f'========= test:{input} ===========')
+    # print(f'========= test:{input} ===========')
     while next_state != goal:
         cost += 1
         next_state, min_fx= next_node(next_state)
-        print('step:{}, state:{}, f(x): {}'.format(cost, next_state, min_fx))
+        # print('step:{}, state:{}, f(x): {}'.format(cost, next_state, min_fx))
         if cost > 200:
             print('not found')
             break
-    print('start:{}, end:{}, min_steps:{}\n'.format(input, next_state, cost))
+    # print('start:{}, end:{}, min_steps:{}\n'.format(input, next_state, cost))
+    print(cost)
